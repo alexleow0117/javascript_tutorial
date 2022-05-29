@@ -8,6 +8,7 @@
 </head>
 <body>
     <input type="text" id="number1">
+    <input type="text" id="operator">
     <input type="text" id="number2">
     <button onclick="sum()">sum</button>
     <span id="answer"></span>
@@ -17,8 +18,18 @@
         function sum(){
             var a = Number(document.getElementById("number1").value);
             var b = Number(document.getElementById("number2").value);
+            var op= document.getElementById("operator").value;
+            var c;
             
-            var c= a+b;
+            if(op== "+"){
+                c = a+b;
+            } else if(op=="-"){
+                c=a-b;
+            }else if(op=="*"){
+                c=a*b;
+            }else {
+                c=a/b;
+            }
 
             document.getElementById("answer").innerHTML = "The value is " + c;
         }
