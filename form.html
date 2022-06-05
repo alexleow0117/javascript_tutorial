@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+     
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+     
+
+</head>
+ 
+<body>
+
+    <form name="infoform" onsubmit="return validateform()">
+        <fieldset>
+          <legend>General Info</legend>
+          <div class="form-group">
+            <label for="fname">First Name:</label>
+            <div class="invalid-feedback">
+              Please enter your name!
+              </div>
+              <br>
+            <input type="text" class="form-control" id="fname">
+
+          </div>
+
+          <div class="form-group">
+            <label for="lname">Last Name:</label><br>
+            <input type="text" class="form-control" id="lname">
+          </div>
+
+          <div class="form-group">
+            <label for="lname">Date of Birth</label><br>
+            <input type="date" class="form-control" id="date">
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="male" id="male" value="option1">
+                  <label class="form-check-label" for="male">
+                    Male
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="female" id="female" value="option2">
+                  <label class="form-check-label" for="femlae">
+                    Female
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="others" id="others" value="option3">
+                  <label class="form-check-label" for="others">
+                    Others
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+        
+      <form class="detailsform">
+        <fieldset>
+          <legend>Login Details</legend>
+          <div class="form-group">
+            <label for="fname">First Name:</label><br>
+            <input type="text" class="form-control" id="fname">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label><br>
+            <input type="email" class="form-control" id="email">
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label><br>
+            <input type="password" class="form-control" id="password">
+          </div>
+
+          <div class="form-group">
+            <label for="cpassword">Confirm Password:</label><br>
+            <input type="password" class="form-control" id="cpassword">
+          </div>
+
+        </fieldset>
+      </form>
+
+      <button type="submit" class="btn btn-primary" >Submit</button>
+     
+    <script>
+        function validateForm() {
+          var name=document.infoform.fname.value;  
+          var password=document.myform.password.value;  
+            
+          if (name==null || name==""){  
+            alert("Name can't be blank");  
+            return false;  
+          }else if(password.length<6){  
+            alert("Password must be at least 6 characters long.");  
+            return false;  
+            }  
+}  
+        
+    </script>
+</body>
+ 
+</html>
